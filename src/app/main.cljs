@@ -28,7 +28,16 @@
          "This is a modal"
          [:ul
           [:li "With content"]
-          [:li "And lists"]]]]])))
+          [:li "And lists"]]]]
+       [:div {:style {:margin-top "25px"
+                      :display "flex"
+                      :justify-content "center"
+                      :font-size "75%"
+                      :font-weight "100"
+                      :font-variant "small-caps"}}
+        "Presentation about this site here: "
+        [:a {:href "https://suspicious-archimedes-390f0a.netlify.com/"}
+         "Reveal.js site on Netlify"]]])))
 
 (defn ^:dev/after-load start []
   (r/render [app]
