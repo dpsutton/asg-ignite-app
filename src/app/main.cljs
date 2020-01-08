@@ -2,8 +2,6 @@
   (:require [reagent.core :as r]
             ["react-modal" :as Modal]))
 
-(.setAppElement Modal "#app")
-
 (defn app
   []
   (let [modal-state (r/atom false)]
@@ -43,6 +41,7 @@
   (r/render [app]
             (.getElementById js/document "app")))
 
-(defn ^:export main
+(defn ^:export init
   []
+  (.setAppElement Modal "#app")
   (start))
